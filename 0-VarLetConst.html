@@ -1,0 +1,76 @@
+<meta charset="UTF-8">
+
+Escopo = Contexto del origen de una variable
+    Escopo Global: Declara una var fuera de una funcion (while, if, for...)
+    eje:
+        <script>
+    
+        var miNombre = "Maria"
+        console.log(miNombre); //Imprimir en consola
+        console.log(window); //se guardan las variables y sus definiciones
+        window.alert("hiii")
+
+        function mostrarN(){
+
+            console.log(miNombre);
+
+        }
+        
+        mostrarN();
+
+        //se puede imprimir tanto fuera como dentro
+        //con var estamos añadiendola en el objeto global,
+        </script>
+
+        escoplo local: Se declara dentro de una funcion o bloque de codigo
+
+        <script>
+
+            function mostrarA(){
+
+                var miApellido = "Garcia"
+                console.log(miApellido); //Al estar dentro si funciona
+            }
+
+            mostrarA();
+            //console.log(miApellido); //Al ser local no se puede usar fuera de la funcion
+
+            if(true){
+
+                var animal = "Gato";
+
+            }
+
+            console.log(animal); //no respeta los bloques de codigo
+
+            if(true){
+
+                let color = "Azul"; //let inicia aunque no tenga valor
+                console.log(color);
+
+            }
+
+            //console.log(color); //Let si respeta la local cuando estan en bloques de codigo
+
+            //Const si o si debe ser inicializasa para funcionar, ademas estas no pueden ser modificadas despues (como var o let)
+
+            if(true){
+
+                const numero = "treitan";
+                console.log(numero);
+                numero = "veinte"; //no se modifica
+                console.log(numero);
+
+            }
+
+                console.log(numero); //Tambien conserva local
+
+
+        </script>
+
+        var : si vas a utilizar muucho en objeto window
+        let: si necesita ser flexible / cambiable
+        const : si no necesitas las otras y necesitas que no cambie        
+
+        esto es solo para porbar el git
+        lo mismo para el servidor de "maria"
